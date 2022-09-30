@@ -29,17 +29,18 @@ class Feedback extends React.Component {
   render() {
     return (
       <div>
+         <Controls
+          onGood={this.addGood}
+          onNeutral={this.addNeutral}
+          onBad={this.addBad}
+        />
         <Statistics
           good={this.state.good}
           neutral={this.state.neutral}
           bad={this.state.bad}
           
         />
-        <Controls
-          onGood={this.addGood}
-          onNeutral={this.addNeutral}
-          onBad={this.addBad}
-        />
+       
       </div>
     );
   }
