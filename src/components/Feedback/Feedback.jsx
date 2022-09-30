@@ -25,7 +25,7 @@ class Feedback extends React.Component {
       bad: prevState.bad + 1,
     }));
   };
-
+ 
   render() {
     return (
       <div>
@@ -33,6 +33,7 @@ class Feedback extends React.Component {
           good={this.state.good}
           neutral={this.state.neutral}
           bad={this.state.bad}
+          
         />
         <Controls
           onGood={this.addGood}
