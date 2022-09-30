@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Controls = ({ onGood, onNeutral, onBad }) => {
+const Controls = ({ onGood, onNeutral, onBad }) => 
   <ul>
     <li>
       <button type="button" onClick={onGood}>
@@ -18,6 +18,6 @@ const Controls = ({ onGood, onNeutral, onBad }) => {
       </button>
     </li>
   </ul>;
-};
+;
 
 export default Controls;
