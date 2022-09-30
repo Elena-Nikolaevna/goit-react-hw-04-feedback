@@ -1,4 +1,5 @@
 import React from 'react';
+import Controls from './Controls.jsx';
 
 class Feedback extends React.Component {
   state = {
@@ -6,40 +7,40 @@ class Feedback extends React.Component {
     neutral: 0,
     bad: 0,
   };
-  addGood = () => {};
+  addGood = () => {
+    this.setState(prevState => ({
+      good: prevState.good + 1,
+    }));
+  };
 
-  addNeutral = () => {};
+  addNeutral = () => {
+    this.setState(prevState => ({
+      neutral: prevState.neutral + 1,
+    }));
+  };
 
-  addBad = () => {};
+  addBad = () => {
+    this.setState(prevState => ({
+      bad: prevState.bad + 1,
+    }));
+  };
 
   render() {
     return (
-      <>
-        <ul>
-          <li>Good: {this.state.good}</li>
-          <li>Neutral: {this.state.neutral}</li>
-          <li>Bad: {this.state.bad}</li>
-          <li>Total: </li>
-          <li>Positive feedback: % </li>
-        </ul>
-        <ul>
-          <li>
-            <button type="button" onClick={this.addGood}>
-              Good
-            </button>
-          </li>
-          <li>
-            <button type="button" onClick={this.addNeutral}>
-              Neutral
-            </button>
-          </li>
-          <li>
-            <button type="button" onClick={this.addBad}>
-              Bad
-            </button>
-          </li>
-        </ul>
-      </>
+        <div>
+            <ul>
+            <li>Good: {this.state.good}</li>
+            <li>Neutral: {this.state.neutral}</li>
+            <li>Bad: {this.state.bad}</li>
+            <li>Total: </li>
+            <li>Positive feedback: % </li>
+            </ul>
+            <Controls
+            onGood={this.addGood}
+            onNeutral={this.addNeutral}
+            onBad={this.addBad}
+            />
+        </div>
     );
   }
 }
