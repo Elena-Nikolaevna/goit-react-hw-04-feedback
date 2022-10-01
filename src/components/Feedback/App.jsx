@@ -4,7 +4,7 @@ import  Feedback  from "./Feedback";
 
 export const App = () => {
   return (
-    <div
+    <div className="App"
       style={{
         height: '100vh',
         display: 'flex',
@@ -12,10 +12,11 @@ export const App = () => {
         alignItems: 'center',
         fontSize: 20,
         flexDirection: 'column',
-        color: '#010101'
+        color: '#010101',
+        backgroundColor: '#bce7da'
       }}
     >
-      <h1>Please leave feedback</h1>
+      
       <Feedback />
     </div>
   );
