@@ -1,12 +1,33 @@
-import React from 'react';
-
-const Statistics = ({ good, neutral, bad }) =>
- 
-<ul>
-  <li>Good: {good}</li>
-  <li>Neutral: {neutral}</li>
-  <li>Bad: {bad}</li>
-  <li>Total: </li>
-  <li>Positive feedback: % </li>
-</ul>;
+import propTypes from 'prop-types';
+import css from './Feedback.module.css';
+const Statistics = ({
+  options,
+  onCountTotalFeedback,
+  onCountPositiveFeedbackPercentage,
+}) => (
+  <ul className={css.list}>
+    <li className={css.box}>
+      <p className={css.stat}>Good: {options.good}</p>
+    </li>
+    <li className={css.box}>
+      <p className={css.stat}>Neutral: {options.neutral}</p>
+    </li>
+    <li className={css.box}>
+      <p className={css.stat}>Bad: {options.bad}</p>
+    </li>
+    <li className={css.box}>
+      <p className={css.stat}>Total: {onCountTotalFeedback}</p>
+    </li>
+    <li className={css.box}>
+      <p className={css.stat}>
+        Positive feedback: {onCountPositiveFeedbackPercentage} %{' '}
+      </p>
+    </li>
+  </ul>
+);
 export default Statistics;
+
+Statistics.propTypes = {
+  onCountTotalFeedback: propTypes.number.isRequired,
+  
+};
