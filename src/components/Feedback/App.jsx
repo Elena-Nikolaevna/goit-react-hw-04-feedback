@@ -13,7 +13,7 @@ export const App = () => {
         fontSize: 20,
         flexDirection: 'column',
         color: '#010101',
-        backgroundColor: '#bce7da'
+        backgroundColor: '#dee7e4'
       }}
     >
       
