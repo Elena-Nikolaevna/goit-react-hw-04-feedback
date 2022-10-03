@@ -28,6 +28,8 @@ const Statistics = ({
 export default Statistics;
 
 Statistics.propTypes = {
+  options: propTypes.object.isRequired,  
   onCountTotalFeedback: propTypes.number.isRequired,
+  onCountPositiveFeedbackPercentage: propTypes.number.isRequired,
   
 };
