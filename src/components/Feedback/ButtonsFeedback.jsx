@@ -19,7 +19,7 @@ const ButtonsFeedback = ({ options, onCountFeedback }) => (
 export default ButtonsFeedback;
 
 ButtonsFeedback.propTypes = {
-  options: propTypes.array,
+  options: propTypes.array.isRequired,
   option: propTypes.string,
   onCountFeedback: propTypes.func.isRequired,
 };
