@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './Feedback.module.css';
 const ButtonsFeedback = ({ options, onCountFeedback }) => (
   <ul className={css.ul}>
@@ -19,7 +19,6 @@ const ButtonsFeedback = ({ options, onCountFeedback }) => (
 export default ButtonsFeedback;
 
 ButtonsFeedback.propTypes = {
-  options: propTypes.array.isRequired,
-  option: propTypes.string,
-  onCountFeedback: propTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string.isRequired), 
+  onCountFeedback: PropTypes.func.isRequired,
 };
