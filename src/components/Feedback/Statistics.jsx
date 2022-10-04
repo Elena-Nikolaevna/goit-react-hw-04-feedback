@@ -28,7 +28,7 @@ const Statistics = ({
 export default Statistics;
 
 Statistics.propTypes = {
-  options: PropTypes.objectOf(PropTypes.number),
+  options: PropTypes.objectOf(PropTypes.number.isRequired),
   onCountTotalFeedback: PropTypes.number.isRequired,
   onCountPositiveFeedbackPercentage: PropTypes.number.isRequired,
 };
