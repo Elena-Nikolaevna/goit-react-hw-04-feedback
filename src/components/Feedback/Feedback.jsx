@@ -46,12 +46,13 @@ class Feedback extends React.Component {
   };
 
   render() {
+    const options = Object.keys(this.state);
     const { good, neutral, bad } = this.state;
     return (
       <div className={css.feedback}>
         <Section title="Please leave feedback!">
           <ButtonsFeedback
-            options={['good', 'neutral', 'bad']}
+            options={options}
             onCountFeedback={this.countFeedback}
           />
         </Section>
