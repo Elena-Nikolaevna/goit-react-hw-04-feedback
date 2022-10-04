@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './Feedback.module.css';
 const Statistics = ({
   options,
@@ -28,8 +28,7 @@ const Statistics = ({
 export default Statistics;
 
 Statistics.propTypes = {
-  options: propTypes.object.isRequired,  
-  onCountTotalFeedback: propTypes.number.isRequired,
-  onCountPositiveFeedbackPercentage: propTypes.number.isRequired,
-  
+  options: PropTypes.objectOf(PropTypes.number),
+  onCountTotalFeedback: PropTypes.number.isRequired,
+  onCountPositiveFeedbackPercentage: PropTypes.number.isRequired,
 };
