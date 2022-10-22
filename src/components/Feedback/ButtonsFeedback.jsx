@@ -8,7 +8,8 @@ const ButtonsFeedback = ({ options, onCountFeedback }) => (
           className={css.button}
           type="button"
           name={option}
-          onClick={() => onCountFeedback(option)}
+          onClick={onCountFeedback}
+          //onClick={() => onCountFeedback(option)}
         >
           {option}
         </button>
